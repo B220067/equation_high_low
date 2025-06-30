@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import random
 import itertools
 import math
+import os
 
 class Card:
     def __init__(self, card_type, value, set_name=None):
