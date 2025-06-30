@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equation High Low Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Equation High Low Game</h1>
+    <div style="margin-bottom: 18px;">
+        <div style="font-size:1.1em; color:#444;">
+            Create an equation using all your cards to get as close as possible to 1 or 20.<br>
+        </div>
+        <div style="margin-top:8px; color:#666;">
+            <strong>How to play:</strong> Drag cards from your hand into the equation area in any order. Use all cards. The equation result updates as you build. Press "Submit" to lock in your answer and see the best possible solutions.
+        </div>
+    </div>
+    <h2>Your Hand</h2>
+    <div id="hand">
+        {% for card in hand %}
+            <div class="card" draggable="true" data-type="{{ card.card_type }}" data-value="{{ card.value }}" data-set="{{ card.set_name }}">{{ card }}</div>
+        {% endfor %}
+    </div>
+    <h2>Build your equation:</h2>
+    <div id="equation-area"></div>
+    <div id="live-output"></div>
+    <button id="submit-btn">Submit</button>
+    <div id="best-result"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

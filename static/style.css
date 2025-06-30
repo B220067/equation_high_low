@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    margin: 40px;
+}
+h1 {
+    color: #333;
+}
+#hand, #equation-area {
+    min-height: 60px;
+    margin: 20px 0;
+    padding: 10px;
+    background: #fff;
+    border: 2px dashed #e0c97f;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    background: #fffbe7;
+    border: 2px solid #e0c97f;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin: 8px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: grab;
+    box-shadow: 2px 2px 8px #e0c97f33;
+    user-select: none;
+    transition: box-shadow 0.2s;
+}
+.card:active {
+    box-shadow: 0 0 0 #e0c97f33;
+}
+#live-output, #best-result {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+button {
+    padding: 10px 24px;
+    font-size: 1.1em;
+    background: #ffe066;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background: #ffd700;
+}
